@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import dynamic from "next/dynamic";
 import Masonry from "./Masonry";
-import CircularGallery from "./CircularGallery";
 import Stack from './Stack'
 
 // Dynamically import react-confetti to avoid SSR issues
@@ -15,11 +14,11 @@ const images = [
   { id: 3, img: "/uspic/IMG-20240630-WA0008.jpg" },
   { id: 4, img: "/uspic/IMG-20240630-WA0023.jpg" },
   { id: 5, img: "/uspic/IMG-20241009-WA0014.jpg" },
-  // { id: 6, img: "/uspic/IMG-20241009-WA0037.jpg" },
-  // { id: 7, img: "/uspic/IMG-20241009-WA0052.jpg" },
-  // { id: 8, img: "/uspic/IMG-20241010-WA0035.jpg" },
-  // { id: 9, img: "/uspic/IMG-20241010-WA0046.jpg" },
-  // { id: 10, img: "/uspic/IMG-20241010-WA0049.jpg" },
+  { id: 6, img: "/uspic/IMG-20241009-WA0037.jpg" },
+  { id: 7, img: "/uspic/IMG-20241009-WA0052.jpg" },
+  { id: 8, img: "/uspic/IMG-20241010-WA0035.jpg" },
+  { id: 9, img: "/uspic/IMG-20241010-WA0046.jpg" },
+  { id: 10, img: "/uspic/IMG-20241010-WA0049.jpg" },
   // { id: 11, img: "/uspic/IMG-20241010-WA0062.jpg" },
   // { id: 12, img: "/uspic/IMG-20241010-WA0065.jpg" },
   // { id: 13, img: "/uspic/IMG-20241011-WA0034.jpg" },
