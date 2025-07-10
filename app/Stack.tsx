@@ -1,8 +1,8 @@
 import { motion, useMotionValue, useTransform } from "framer-motion";
-import { useEffect, useState, useMemo, ReactNode } from "react";
+import { useState } from "react";
 
 interface CardRotateProps {
-  children: ReactNode;
+  children: React.ReactNode;
   onSendToBack: () => void;
   sensitivity: number;
 }
@@ -13,7 +13,7 @@ function CardRotate({ children, onSendToBack, sensitivity }: CardRotateProps) {
   const rotateX = useTransform(y, [-100, 100], [60, -60]);
   const rotateY = useTransform(x, [-100, 100], [-60, 60]);
 
-  function handleDragEnd(_: unknown, info: { offset: { x: number; y: number } }) {
+  function handleDragEnd(_: never, info: { offset: { x: number; y: number } }) {
     if (
       Math.abs(info.offset.x) > sensitivity ||
       Math.abs(info.offset.y) > sensitivity
@@ -40,18 +40,13 @@ function CardRotate({ children, onSendToBack, sensitivity }: CardRotateProps) {
   );
 }
 
-export interface CardData {
-  id: number;
-  img: string;
-}
-
 interface StackProps {
   randomRotation?: boolean;
   sensitivity?: number;
   cardDimensions?: { width: number; height: number };
-  cardsData?: CardData[];
-  animationConfig?: { stiffness: number; damping: number };
   sendToBackOnClick?: boolean;
+  cardsData?: { id: number; img: string }[];
+  animationConfig?: { stiffness: number; damping: number };
 }
 
 export default function Stack({
@@ -62,66 +57,50 @@ export default function Stack({
   animationConfig = { stiffness: 260, damping: 20 },
   sendToBackOnClick = false,
 }: StackProps) {
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
-
   const [cards, setCards] = useState(
     cardsData.length
       ? cardsData
       : [
-          { id: 1, img: "/uspic/IMG-20231220-WA0014.jpg" },
-          { id: 2, img: "/uspic/IMG-20231220-WA0017.jpg" },
-          { id: 3, img: "/uspic/IMG-20240630-WA0008.jpg" },
-          { id: 4, img: "/uspic/IMG-20240630-WA0023.jpg" },
-          { id: 5, img: "/uspic/IMG-20241009-WA0014.jpg" },
-          { id: 6, img: "/uspic/IMG-20241009-WA0037.jpg" },
-          { id: 7, img: "/uspic/IMG-20241009-WA0052.jpg" },
-          { id: 8, img: "/uspic/IMG-20241010-WA0035.jpg" },
-          { id: 9, img: "/uspic/IMG-20241010-WA0046.jpg" },
-          { id: 10, img: "/uspic/IMG-20241010-WA0049.jpg" },
-          { id: 11, img: "/uspic/IMG-20241010-WA0062.jpg" },
-          { id: 12, img: "/uspic/IMG-20241010-WA0065.jpg" },
-          { id: 13, img: "/uspic/IMG-20241011-WA0034.jpg" },
-          { id: 14, img: "/uspic/IMG-20241011-WA0036.jpg" },
-          { id: 15, img: "/uspic/IMG-20241012-WA0042.jpg" },
-          { id: 16, img: "/uspic/IMG-20241012-WA0057.jpg" },
+          {
+            id: 1,
+            img: "https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?q=80&w=500&auto=format",
+          },
+          {
+            id: 2,
+            img: "https://images.unsplash.com/photo-1449844908441-8829872d2607?q=80&w=500&auto=format",
+          },
+          {
+            id: 3,
+            img: "https://images.unsplash.com/photo-1452626212852-811d58933cae?q=80&w=500&auto=format",
+          },
+          {
+            id: 4,
+            img: "https://images.unsplash.com/photo-1572120360610-d971b9d7767c?q=80&w=500&auto=format",
+          },
         ]
-  );
-
-  // Generate random rotations (client only, after mount)
-  const randomRotations = useMemo(
-    () =>
-      randomRotation
-        ? cards.map(() => Math.random() * 10 - 5)
-        : cards.map(() => 0),
-    [cards.length, randomRotation]
   );
 
   const sendToBack = (id: number) => {
     setCards((prev) => {
       const newCards = [...prev];
       const index = newCards.findIndex((card) => card.id === id);
-      if (index !== -1) {
-        const [card] = newCards.splice(index, 1);
-        newCards.unshift(card);
-      }
+      const [card] = newCards.splice(index, 1);
+      newCards.unshift(card);
       return newCards;
     });
   };
-
-  if (!mounted) return null;
 
   return (
     <div
       className="relative"
       style={{
-        width: `${cardDimensions.width}px`,
-        height: `${cardDimensions.height}px`,
+        width: cardDimensions.width,
+        height: cardDimensions.height,
         perspective: 600,
       }}
     >
       {cards.map((card, index) => {
-        const randomRotate = randomRotations[index] || 0;
+        const randomRotate = randomRotation ? Math.random() * 10 - 5 : 0;
 
         return (
           <CardRotate
@@ -144,8 +123,8 @@ export default function Stack({
                 damping: animationConfig.damping,
               }}
               style={{
-                width: `${cardDimensions.width}px`,
-                height: `${cardDimensions.height}px`,
+                width: cardDimensions.width,
+                height: cardDimensions.height,
               }}
             >
               <img

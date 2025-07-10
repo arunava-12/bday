@@ -8,6 +8,25 @@ import Stack from "./Stack";
 // Dynamically import react-confetti to avoid SSR issues
 const Confetti = dynamic(() => import("react-confetti"), { ssr: false });
 
+const images = [
+  { id: 1, img: "/uspic/IMG-20231220-WA0014.jpg" },
+  { id: 2, img: "/uspic/IMG-20231220-WA0017.jpg" },
+  { id: 3, img: "/uspic/IMG-20240630-WA0008.jpg" },
+  { id: 4, img: "/uspic/IMG-20240630-WA0023.jpg" },
+  { id: 5, img: "/uspic/IMG-20241009-WA0014.jpg" },
+  { id: 6, img: "/uspic/IMG-20241009-WA0037.jpg" },
+  { id: 7, img: "/uspic/IMG-20241009-WA0052.jpg" },
+  { id: 8, img: "/uspic/IMG-20241010-WA0035.jpg" },
+  { id: 9, img: "/uspic/IMG-20241010-WA0046.jpg" },
+  { id: 10, img: "/uspic/IMG-20241010-WA0049.jpg" },
+  { id: 11, img: "/uspic/IMG-20241010-WA0062.jpg" },
+  { id: 12, img: "/uspic/IMG-20241010-WA0065.jpg" },
+  { id: 13, img: "/uspic/IMG-20241011-WA0034.jpg" },
+  { id: 14, img: "/uspic/IMG-20241011-WA0036.jpg" },
+  { id: 15, img: "/uspic/IMG-20241012-WA0042.jpg" },
+  { id: 16, img: "/uspic/IMG-20241012-WA0057.jpg" },
+];
+
 export default function Home() {
   const [cardOpen, setCardOpen] = useState(false);
 
@@ -134,24 +153,18 @@ export default function Home() {
         )}
       </section>
 
-      {/* Rolling Gallery Section */}
-      {/* Removed RollingGallery and replaced with Stack */}
+      {/* Stack */}
       <section className="w-full flex flex-col items-center justify-center py-5">
         <h2 className="text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-pink-300 mb-4 drop-shadow-lg">
           Our Special Moments
         </h2>
         <Stack
-          randomRotation={true}
-          sensitivity={180}
-          sendToBackOnClick={false}
-          cardDimensions={{ width: 200, height: 200 }}
-          cardsData={[
-            { id: 1, img: "/img/IMG-20241009-WA0040.jpg" },
-            { id: 2, img: "/img/IMG-20241009-WA0044.jpg" },
-            { id: 3, img: "/img/IMG-20241009-WA0048.jpg" },
-            { id: 4, img: "/img/IMG-20241009-WA0054.jpg" }
-          ] as import("./Stack").CardData[]}
-        />
+  randomRotation={true}
+  sensitivity={180}
+  sendToBackOnClick={false}
+  cardDimensions={{ width: 200, height: 200 }}
+  cardsData={images}
+/>
       </section>
 
       {/* Photo Gallery Section */}
