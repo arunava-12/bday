@@ -19,12 +19,12 @@ const images = [
   { id: 8, img: "/uspic/IMG-20241010-WA0035.jpg" },
   { id: 9, img: "/uspic/IMG-20241010-WA0046.jpg" },
   { id: 10, img: "/uspic/IMG-20241010-WA0049.jpg" },
-  // { id: 11, img: "/uspic/IMG-20241010-WA0062.jpg" },
-  // { id: 12, img: "/uspic/IMG-20241010-WA0065.jpg" },
-  // { id: 13, img: "/uspic/IMG-20241011-WA0034.jpg" },
-  // { id: 14, img: "/uspic/IMG-20241011-WA0036.jpg" },
-  // { id: 15, img: "/uspic/IMG-20241012-WA0042.jpg" },
-  // { id: 16, img: "/uspic/IMG-20241012-WA0057.jpg" },
+  { id: 11, img: "/uspic/IMG-20241010-WA0062.jpg" },
+  { id: 12, img: "/uspic/IMG-20241010-WA0065.jpg" },
+  { id: 13, img: "/uspic/IMG-20241011-WA0034.jpg" },
+  { id: 14, img: "/uspic/IMG-20241011-WA0036.jpg" },
+  { id: 15, img: "/uspic/IMG-20241012-WA0042.jpg" },
+  { id: 16, img: "/uspic/IMG-20241012-WA0057.jpg" },
 ];
 
 export default function Home() {
@@ -180,7 +180,7 @@ export default function Home() {
   randomRotation={true}
   sensitivity={180}
   sendToBackOnClick={true}
-  cardDimensions={{ width: 200, height: 200 }}
+  cardDimensions={{ width: 500, height: 500 }}
   cardsData={images}
 />
       </section>
