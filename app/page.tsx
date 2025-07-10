@@ -180,7 +180,7 @@ export default function Home() {
   randomRotation={true}
   sensitivity={180}
   sendToBackOnClick={true}
-  cardDimensions={{ width: 500, height: 500 }}
+  cardDimensions={{ width: 350, height: 350 }}
   cardsData={images}
 />
       </section>
