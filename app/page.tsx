@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import dynamic from "next/dynamic";
 import Masonry from "./Masonry";
-import RollingGallery from "./RollingGallery";
+import Stack from "./Stack";
 
 // Dynamically import react-confetti to avoid SSR issues
 const Confetti = dynamic(() => import("react-confetti"), { ssr: false });
@@ -135,11 +135,23 @@ export default function Home() {
       </section>
 
       {/* Rolling Gallery Section */}
+      {/* Removed RollingGallery and replaced with Stack */}
       <section className="w-full flex flex-col items-center justify-center py-5">
         <h2 className="text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-pink-300 mb-4 drop-shadow-lg">
           Our Special Moments
         </h2>
-        <RollingGallery autoplay={true} pauseOnHover={true} />
+        <Stack
+          randomRotation={true}
+          sensitivity={180}
+          sendToBackOnClick={false}
+          cardDimensions={{ width: 200, height: 200 }}
+          cardsData={[
+            { id: 1, img: "/img/IMG-20241009-WA0040.jpg" },
+            { id: 2, img: "/img/IMG-20241009-WA0044.jpg" },
+            { id: 3, img: "/img/IMG-20241009-WA0048.jpg" },
+            { id: 4, img: "/img/IMG-20241009-WA0054.jpg" }
+          ] as import("./Stack").CardData[]}
+        />
       </section>
 
       {/* Photo Gallery Section */}
