@@ -135,7 +135,7 @@ export default function Home() {
       </section>
 
       {/* Rolling Gallery Section */}
-      <section className="w-full flex flex-col items-center justify-center py-20">
+      <section className="w-full flex flex-col items-center justify-center py-5">
         <h2 className="text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-pink-300 mb-4 drop-shadow-lg">
           Our Special Moments
         </h2>
@@ -143,317 +143,31 @@ export default function Home() {
       </section>
 
       {/* Photo Gallery Section */}
-      <section className="w-full flex flex-col items-center justify-center py-20">
+      <section className="w-full flex flex-col items-center justify-center py-5">
         <h2 className="text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-indigo-300 mb-4 drop-shadow-lg">
           Our Memories
         </h2>
         {/* Masonry Gallery */}
         <div className="w-full max-w-5xl">
           <Masonry
-            items={[
-              // Original 6 images
-              {
-                id: "1",
-                img: "https://picsum.photos/id/1015/600/900?grayscale",
-                url: "https://example.com/one",
-                height: 400,
-              },
-              {
-                id: "2",
-                img: "https://picsum.photos/id/1011/600/750?grayscale",
-                url: "https://example.com/two",
-                height: 250,
-              },
-              {
-                id: "3",
-                img: "https://picsum.photos/id/1020/600/800?grayscale",
-                url: "https://example.com/three",
-                height: 600,
-              },
-              {
-                id: "4",
-                img: "https://picsum.photos/id/1025/600/700?grayscale",
-                url: "https://example.com/four",
-                height: 350,
-              },
-              {
-                id: "5",
-                img: "https://picsum.photos/id/1035/600/900?grayscale",
-                url: "https://example.com/five",
-                height: 500,
-              },
-              {
-                id: "6",
-                img: "https://picsum.photos/id/1040/600/800?grayscale",
-                url: "https://example.com/six",
-                height: 300,
-              },
-              // Additional images to reach 50 total
-              {
-                id: "7",
-                img: "https://picsum.photos/id/1041/600/850?grayscale",
-                url: "https://example.com/seven",
-                height: 450,
-              },
-              {
-                id: "8",
-                img: "https://picsum.photos/id/1042/600/750?grayscale",
-                url: "https://example.com/eight",
-                height: 280,
-              },
-              {
-                id: "9",
-                img: "https://picsum.photos/id/1043/600/900?grayscale",
-                url: "https://example.com/nine",
-                height: 520,
-              },
-              {
-                id: "10",
-                img: "https://picsum.photos/id/1044/600/700?grayscale",
-                url: "https://example.com/ten",
-                height: 320,
-              },
-              {
-                id: "11",
-                img: "https://picsum.photos/id/1045/600/800?grayscale",
-                url: "https://example.com/eleven",
-                height: 380,
-              },
-              {
-                id: "12",
-                img: "https://picsum.photos/id/1054/600/900?grayscale",
-                url: "https://example.com/twelve",
-                height: 480,
-              },
-              {
-                id: "13",
-                img: "https://picsum.photos/id/1047/600/750?grayscale",
-                url: "https://example.com/thirteen",
-                height: 290,
-              },
-              {
-                id: "14",
-                img: "https://picsum.photos/id/1048/600/850?grayscale",
-                url: "https://example.com/fourteen",
-                height: 420,
-              },
-              {
-                id: "15",
-                img: "https://picsum.photos/id/1049/600/700?grayscale",
-                url: "https://example.com/fifteen",
-                height: 340,
-              },
-              {
-                id: "16",
-                img: "https://picsum.photos/id/1050/600/900?grayscale",
-                url: "https://example.com/sixteen",
-                height: 460,
-              },
-              {
-                id: "17",
-                img: "https://picsum.photos/id/1051/600/800?grayscale",
-                url: "https://example.com/seventeen",
-                height: 360,
-              },
-              {
-                id: "18",
-                img: "https://picsum.photos/id/1052/600/750?grayscale",
-                url: "https://example.com/eighteen",
-                height: 310,
-              },
-              {
-                id: "19",
-                img: "https://picsum.photos/id/1053/600/900?grayscale",
-                url: "https://example.com/nineteen",
-                height: 540,
-              },
-              {
-                id: "20",
-                img: "https://picsum.photos/id/1054/600/700?grayscale",
-                url: "https://example.com/twenty",
-                height: 330,
-              },
-              {
-                id: "21",
-                img: "https://picsum.photos/id/1055/600/850?grayscale",
-                url: "https://example.com/twentyone",
-                height: 410,
-              },
-              {
-                id: "22",
-                img: "https://picsum.photos/id/1056/600/800?grayscale",
-                url: "https://example.com/twentytwo",
-                height: 370,
-              },
-              {
-                id: "23",
-                img: "https://picsum.photos/id/1057/600/900?grayscale",
-                url: "https://example.com/twentythree",
-                height: 490,
-              },
-              {
-                id: "24",
-                img: "https://picsum.photos/id/1058/600/750?grayscale",
-                url: "https://example.com/twentyfour",
-                height: 270,
-              },
-              {
-                id: "25",
-                img: "https://picsum.photos/id/1059/600/700?grayscale",
-                url: "https://example.com/twentyfive",
-                height: 350,
-              },
-              {
-                id: "26",
-                img: "https://picsum.photos/id/1060/600/900?grayscale",
-                url: "https://example.com/twentysix",
-                height: 510,
-              },
-              {
-                id: "27",
-                img: "https://picsum.photos/id/1061/600/800?grayscale",
-                url: "https://example.com/twentyseven",
-                height: 390,
-              },
-              {
-                id: "28",
-                img: "https://picsum.photos/id/1062/600/750?grayscale",
-                url: "https://example.com/twentyeight",
-                height: 300,
-              },
-              {
-                id: "29",
-                img: "https://picsum.photos/id/1063/600/850?grayscale",
-                url: "https://example.com/twentynine",
-                height: 430,
-              },
-              {
-                id: "30",
-                img: "https://picsum.photos/id/1064/600/700?grayscale",
-                url: "https://example.com/thirty",
-                height: 320,
-              },
-              {
-                id: "31",
-                img: "https://picsum.photos/id/1065/600/900?grayscale",
-                url: "https://example.com/thirtyone",
-                height: 470,
-              },
-              {
-                id: "32",
-                img: "https://picsum.photos/id/1066/600/800?grayscale",
-                url: "https://example.com/thirtytwo",
-                height: 380,
-              },
-              {
-                id: "33",
-                img: "https://picsum.photos/id/1067/600/750?grayscale",
-                url: "https://example.com/thirtythree",
-                height: 290,
-              },
-              {
-                id: "34",
-                img: "https://picsum.photos/id/1068/600/900?grayscale",
-                url: "https://example.com/thirtyfour",
-                height: 530,
-              },
-              {
-                id: "35",
-                img: "https://picsum.photos/id/1069/600/700?grayscale",
-                url: "https://example.com/thirtyfive",
-                height: 340,
-              },
-              {
-                id: "36",
-                img: "https://picsum.photos/id/1070/600/850?grayscale",
-                url: "https://example.com/thirtysix",
-                height: 420,
-              },
-              {
-                id: "37",
-                img: "https://picsum.photos/id/1071/600/800?grayscale",
-                url: "https://example.com/thirtyseven",
-                height: 360,
-              },
-              {
-                id: "38",
-                img: "https://picsum.photos/id/1072/600/900?grayscale",
-                url: "https://example.com/thirtyeight",
-                height: 480,
-              },
-              {
-                id: "39",
-                img: "https://picsum.photos/id/1073/600/750?grayscale",
-                url: "https://example.com/thirtynine",
-                height: 310,
-              },
-              {
-                id: "40",
-                img: "https://picsum.photos/id/1074/600/700?grayscale",
-                url: "https://example.com/forty",
-                height: 330,
-              },
-              {
-                id: "41",
-                img: "https://picsum.photos/id/1075/600/900?grayscale",
-                url: "https://example.com/fortyone",
-                height: 500,
-              },
-              {
-                id: "42",
-                img: "https://picsum.photos/id/1076/600/800?grayscale",
-                url: "https://example.com/fortytwo",
-                height: 370,
-              },
-              {
-                id: "43",
-                img: "https://picsum.photos/id/1077/600/750?grayscale",
-                url: "https://example.com/fortythree",
-                height: 280,
-              },
-              {
-                id: "44",
-                img: "https://picsum.photos/id/1078/600/850?grayscale",
-                url: "https://example.com/fortyfour",
-                height: 440,
-              },
-              {
-                id: "45",
-                img: "https://picsum.photos/id/1079/600/700?grayscale",
-                url: "https://example.com/fortyfive",
-                height: 350,
-              },
-              {
-                id: "46",
-                img: "https://picsum.photos/id/1080/600/900?grayscale",
-                url: "https://example.com/fortysix",
-                height: 520,
-              },
-              {
-                id: "47",
-                img: "https://picsum.photos/id/1081/600/800?grayscale",
-                url: "https://example.com/fortyseven",
-                height: 390,
-              },
-              {
-                id: "48",
-                img: "https://picsum.photos/id/1082/600/750?grayscale",
-                url: "https://example.com/fortyeight",
-                height: 300,
-              },
-              {
-                id: "49",
-                img: "https://picsum.photos/id/1083/600/850?grayscale",
-                url: "https://example.com/fortynine",
-                height: 430,
-              },
-              {
-                id: "50",
-                img: "https://picsum.photos/id/1084/600/700?grayscale",
-                url: "https://example.com/fifty",
-                height: 340,
-              },
-            ]}
+            items={(() => {
+              // All 54 image filenames from public/img
+              const files = [
+                "IMG-20240726-WA0048.jpg","IMG-20240817-WA0032.jpg","IMG-20240824-WA0035.jpg","IMG-20240825-WA0022.jpg","IMG-20241009-WA0062.jpg","Picsart_24-10-05_22-49-03-968.jpg","IMG-20241009-WA0054.jpg","IMG-20241009-WA0040.jpg","IMG-20241009-WA0048.jpg","IMG-20241009-WA0044.jpg","IMG-20241030-WA0028.jpg","IMG-20241031-WA0036.jpg","IMG-20241031-WA0045.jpg","IMG-20241031-WA0050.jpg","IMG-20241031-WA0067.jpg","IMG-20241031-WA0069.jpg","IMG-20241031-WA0076.jpg","IMG-20241101-WA0053.jpg","IMG-20241101-WA0054.jpg","IMG-20241102-WA0011.jpg","IMG-20241230-WA0053.jpg","IMG-20241231-WA0044.jpg","IMG-20250107-WA0017.jpg","IMG-20250107-WA0018.jpg","IMG-20250107-WA0014.jpg","IMG-20250107-WA0039.jpg","IMG-20250203-WA0021.jpg","IMG-20250203-WA0028.jpg","IMG-20250221-WA0003.jpg","IMG-20250221-WA0008.jpg","IMG_20250226_231122.jpg","IMG-20250306-WA0051.jpg","IMG-20250306-WA0047.jpg","IMG_20250318_051814.jpg","IMG_20250318_053010.jpg","IMG-20250410-WA0007.jpg","IMG-20250419-WA0011.jpg","IMG-20250419-WA0010.jpg","IMG-20250419-WA0021.jpg","IMG-20250419-WA0029.jpg","IMG-20250419-WA0045.jpg","IMG-20250419-WA0037.jpg","IMG-20250419-WA0057.jpg","IMG-20250419-WA0009.jpg","IMG-20250419-WA0043.jpg","IMG-20250419-WA0035.jpg","IMG-20250427-WA0025.jpg","IMG-20250427-WA0027.jpg","IMG-20250427-WA0033.jpg","IMG-20250512-WA0007.jpg","IMG-20250618-WA0001.jpg","IMG-20250618-WA0002.jpg","IMG-20250620-WA0008.jpg","IMG-20250620-WA0009.jpg","IMG-20250620-WA0007.jpg","IMG-20250620-WA0010.jpg"
+              ];
+              // Shuffle array
+              for (let i = files.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [files[i], files[j]] = [files[j], files[i]];
+              }
+              // Map to Masonry items
+              return files.map((filename) => ({
+                id: filename,
+                img: `/img/${filename}`,
+                url: `/img/${filename}`,
+                height: 300 + Math.floor(Math.random() * 201), // 300-500
+              }));
+            })()}
             ease="power3.out"
             duration={0.6}
             stagger={0.05}
