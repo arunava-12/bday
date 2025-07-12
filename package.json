@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "framer-motion": "^12.23.2",
+    "framer-motion": "^12.23.3",
     "gsap": "^3.13.0",
     "jquery": "^3.7.1",
     "next": "15.3.5",
