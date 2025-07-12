@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 import Masonry from "./Masonry";
 import Stack from "./Stack";
 import RotatingText from "./RotatingText";
+import ScrambledText from "./ScrambledText";
 
 // Dynamically import react-confetti to avoid SSR issues
 const Confetti = dynamic(() => import("react-confetti"), { ssr: false });
@@ -52,8 +53,8 @@ export default function Home() {
       {/* Hero Section */}
       <section className="w-full flex flex-col items-center justify-center py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-        <h1 className="flex flex-wrap justify-center items-center text-5xl md:text-6xl font-bold mb-8 drop-shadow-lg leading-tight">
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-400 mr-2">
+          <h1 className="flex flex-wrap justify-center items-center text-5xl md:text-6xl font-bold mb-8 drop-shadow-lg leading-tight">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-400 mr-2">
               Happy Birthday,
             </span>
             <RotatingText
@@ -77,46 +78,53 @@ export default function Home() {
             />
           </h1>
 
-          <div className="space-y-6 text-lg md:text-xl text-purple-200 drop-shadow-md leading-relaxed">
-            <p className="text-center">
-              ✨🎉 Happy Birthday to the most precious person in my life — my
-              beautiful Susmita! 🎂❤️
-            </p>
-            <p className="text-justify">
-              Today isn’t just your birthday; it’s a celebration of your
-              existence, your smile, and every little thing that makes you so
-              incredibly special. 🌹 From the moment you came into my life,
-              everything became brighter, sweeter, and so much more meaningful.
-              Your laughter is the melody my heart never gets tired of, and your
-              kindness inspires me every single day. 🥰
-            </p>
-            <p className="text-justify">
-              You have this magical way of turning simple moments into beautiful
-              memories, and your presence feels like home wherever we are. 🌸💕
-              Thank you for your love, your patience, and for making every day
-              feel like a blessing. Thank you for the late-night talks, for the
-              comfort you give when I need it most, and for being my reason to
-              smile even on the toughest days. 🌙✨
-            </p>
-            <p className="text-justify">
-              On this special day, I wish you all the happiness your heart can
-              hold. 🌼💖 May your dreams come true, your heart stay brave, and
-              your days overflow with love, laughter, and unforgettable
-              adventures. Remember, no matter where life takes us, I’ll always
-              be here by your side — cheering you on and loving you endlessly.
-              👫💫
-            </p>
-            <p className="text-justify">
-              So here’s to you, my darling Susmita — to your beautiful soul,
-              your warm heart, and all the birthdays we’ll celebrate together.
-              🥂🎈 You mean more to me than words can express, and I feel so
-              lucky to share this journey of life with you.
-            </p>
-            <p className="text-center font-semibold text-purple-100">
-              💖✨ Happy Birthday, my love! ✨💖 May your day be as wonderful as
-              your smile and your year as magical as your spirit! 🎉🎁🌹
-            </p>
-          </div>
+          <ScrambledText className="space-y-6 text-base md:text-lg text-purple-200 drop-shadow-md leading-relaxed">
+            <>
+              <p className="text-center">
+                ✨🎉Happy Birthday to the most precious person in my life — my
+                beautiful Susmita!🎂❤️
+              </p>
+
+              <p className="text-center">
+                Today isn’t just your birthday; it’s a celebration of your
+                existence, your smile, and every little thing that makes you so
+                incredibly special. 🌹 From the moment you came into my life,
+                everything became brighter, sweeter, and so much more
+                meaningful. Your laughter is the melody my heart never gets
+                tired of, and your kindness inspires me every single day. 🥰
+              </p>
+
+              <p className="text-justify">
+                You have this magical way of turning simple moments into
+                beautiful memories, and your presence feels like home wherever
+                we are. 🌸💕 Thank you for your love, your patience, and for
+                making every day feel like a blessing. Thank you for the
+                late-night talks, for the comfort you give when I need it most,
+                and for being my reason to smile even on the toughest days. 🌙✨
+              </p>
+
+              <p className="text-justify">
+                On this special day, I wish you all the happiness your heart can
+                hold. 🌼💖 May your dreams come true, your heart stay brave, and
+                your days overflow with love, laughter, and unforgettable
+                adventures. Remember, no matter where life takes us, I’ll always
+                be here by your side — cheering you on and loving you endlessly.
+                👫💫
+              </p>
+
+              <p className="text-justify">
+                So here’s to you, my darling Susmita — to your beautiful soul,
+                your warm heart, and all the birthdays we’ll celebrate together.
+                🥂🎈 You mean more to me than words can express, and I feel so
+                lucky to share this journey of life with you.
+              </p>
+
+              <p className="text-center font-semibold text-purple-100">
+                💖✨ Happy Birthday, my love! ✨💖 May your day be as wonderful
+                as your smile and your year as magical as your spirit! 🎉🎁🌹
+              </p>
+            </>
+          </ScrambledText>
         </div>
       </section>
 
