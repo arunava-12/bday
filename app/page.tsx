@@ -177,12 +177,12 @@ export default function Home() {
           Our Special Moments
         </h2>
         <Stack
-          randomRotation={true}
-          sensitivity={180}
-          sendToBackOnClick={true}
-          cardDimensions={{ width: 350, height: 350 }}
-          cardsData={images}
-        />
+  randomRotation={true}
+  sensitivity={180}
+  sendToBackOnClick={true}
+  cardDimensions={{ width: 500, height: 500 }}
+  cardsData={images}
+/>
       </section>
 
       {/* Photo Gallery Section */}
