@@ -81,8 +81,8 @@ export default function Home() {
           <ScrambledText className="space-y-6 text-base md:text-lg text-purple-200 drop-shadow-md leading-relaxed">
             <>
               <p className="text-center">
-                ✨🎉Happy Birthday to the most precious person in my life — my
-                beautiful Susmita!🎂❤️
+                ✨🎉Happy Birthday to the most precious person in my life — <br />
+                my beautiful Susmita!🎂❤️
               </p>
 
               <p className="text-center">
