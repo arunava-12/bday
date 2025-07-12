@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import dynamic from "next/dynamic";
 import Masonry from "./Masonry";
-import Stack from './Stack'
+import Stack from "./Stack";
 
 // Dynamically import react-confetti to avoid SSR issues
 const Confetti = dynamic(() => import("react-confetti"), { ssr: false });
@@ -177,16 +177,16 @@ export default function Home() {
           Our Special Moments
         </h2>
         <Stack
-  randomRotation={true}
-  sensitivity={180}
-  sendToBackOnClick={true}
-  cardDimensions={{ width: 500, height: 500 }}
-  cardsData={images}
-/>
+          randomRotation={true}
+          sensitivity={180}
+          sendToBackOnClick={true}
+          cardDimensions={{ width: 350, height: 350 }}
+          cardsData={images}
+        />
       </section>
 
       {/* Photo Gallery Section */}
-      <section className="w-full flex flex-col items-center justify-center py-5">
+      <section className="w-full flex flex-col items-center justify-center py-10">
         <h2 className="text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-indigo-300 mb-4 drop-shadow-lg">
           Our Memories
         </h2>
